@@ -1,0 +1,40 @@
+<h2>User Listing</h2>
+
+<button routerLink="/new-user">New User</button>
+<table border="1">
+<tr>
+<th>Name</th>
+<th>Organization</th>
+<th>Contact</th>
+</tr>
+<tr *ngFor="let user of users; let i=index">
+  <td>{{i}}</td>
+  <td>{{user.name}}</td>
+<td>{{user.organization}}</td>
+<!-- <td>{{user.contact}}</td> -->
+<td>
+<ul>
+
+  
+  <!-- <div *ngIf="!isArrayInstanceOf(user.contact)">
+  <li *ngFor="let item of user.contact  ; let j=index">
+      {{j}} {{item.type}}  - {{item.label}} - {{item.value}}
+  </li>
+</div> -->
+  <!-- <div *ngIf="isArrayInstanceOf(user.contact)">
+      <li *ngFor="let item of user.contact  ; let j=index">
+          {{j}} {{item.type}}  - {{item.label}} - {{item.value}}
+      </li>
+    </div> -->
+</ul>
+
+
+  <!-- <li *ngFor="let subItem of user['contact']"> {{subItem.type}} </li>
+  <li *ngFor="let subItem of user['contact']"> {{subItem.label}} </li>
+  <li *ngFor="let subItem of user['contact']"> {{subItem.value}} </li> -->
+  
+</td>
+<td><button (click)="deleteUser(user.name)">Delete</button>
+  <button (click)="isArrayInstanceOf(user.contact)">Check</button></td>
+</tr>
+</table>

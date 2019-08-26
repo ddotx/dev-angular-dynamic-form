@@ -1,0 +1,20 @@
+<span>
+    <p>Object</p>
+    <div *ngFor="let item of object | keyvalue">
+      {{item.key}}:{{item.value}}
+    </div><br><br>
+    <p>Map</p>
+    <div *ngFor="let item of map | keyvalue">
+      {{item.key}}:{{item.value}}
+    </div><br><br>
+    <p>Contact</p>
+    <div *ngFor="let item of contact | keyvalue">
+      {{item.key}}:{{item.value}}
+    </div><br><br>
+
+    <div *ngIf="isArrayInstanceOf(contactArray)">
+    <li *ngFor="let item of contactArray  ; let j=index">
+        {{j}} {{item.type}}  - {{item.label}} - {{item.value}}
+    </li>
+  </div>
+  </span>
