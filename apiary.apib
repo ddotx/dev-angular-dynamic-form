@@ -1,0 +1,31 @@
+FORMAT: 1A
+HOST: https://epufhco5xd.execute-api.ap-southeast-1.amazonaws.com/Dev
+
+# angular-dynamic-from
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/user]
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "Rin Tomo",
+                "organization": "sod"
+                "contact": [
+                    {
+                        "type": "email",
+                        "value": "rin@sod.com",
+                        "label": "work"
+                    },
+                    {
+                        "type": "email",
+                        "value": "rintomo@sod.com",
+                        "label": "personal"
+                    }
+                ]
+            }
+        ]
